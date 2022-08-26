@@ -13,7 +13,7 @@ export default function PostPage({post}){
         <article className="pb-20">
             <h1 className="font-bold text-4xl mb-6">{post.frontMatter.title}</h1>
             <h2 className="font-semibold text-xl mb-6">{post.frontMatter.excerpt}</h2>
-            <hr className="my-3"/>
+            <hr className="my-3 border-gray-700"/>
             <div className="prose">{content}</div>
             <p className="text-end font-thin pt-10">{post.frontMatter.date}</p>
         </article>
@@ -23,20 +23,25 @@ export default function PostPage({post}){
 
 
         <form>
-            <textarea rows="3" className="border border-blue-900 w-full rounded" />
-            {isAuthenticated ? <div className="space-x-4 flex items-center mt-4">
-                <button className="bg-blue-600 text-white px-2 py-1 rounded">Send</button>
+            <textarea rows="4" className="border border-gray-900 w-full rounded" />
+            {isAuthenticated ? <div className="flex justify-between items-center mt-4">
+                <button className="bg-blue-600 text-white px-5 py-2 text-lg rounded
+                hover:bg-black hover:text-blue-600 ease-in-out duration-200">Send</button>
+                <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                 <img src={user.picture} width={30} className="rounded-full"  />
-                <span>{user.name}</span>
+                <span className="font-semibold text-lg">{user.name}</span>
                 <button typeof="button"
-                        className="rounded border-4 border-red-500 bg-red-500 px-2 py-1"
-                        onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL + "/blog"})}>
+                        className="flex rounded bg-red-500 px-5 py-2 font-semibold
+                                hover:bg-black hover:text-red-500 text-lg ease-in-out duration-200"
+                        onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
                     Log Out
                 </button>
+            </div>
+            </div>:<div className="flex justify-end my-4">
 
-            </div>:<div>
                 <button typeof="button"
-                        className="rounded border-4 border-green-500 bg-green-500 p-3"
+                        className="rounded bg-green-500 px-5 py-2 font-semibold
+                                hover:bg-black hover:text-green-500 text-lg ease-in-out duration-200"
                         onClick={() => loginWithRedirect()}>
                     Log In
                 </button>

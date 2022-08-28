@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
                 <Link href="/">
                     <a className="uppercase text-[1.7rem] md:hidden font-bold text-xl hover:text-neutral-600 ">Sadan Efe's Blog</a>
                 </Link>
-                <div className="space-x-7 flex items-center text-xl md:text-lg ">
+                <div className="space-x-8 flex items-center text-xl md:text-[1.1rem] ease-in-out duration-200 ">
             <Link href="/">
                 <a className="hover:text-gray-500">Hakkımda</a>
             </Link>
@@ -19,15 +19,15 @@ import { useAuth0 } from "@auth0/auth0-react";
             </Link>
                 </div>
                 <Link href="/">
-                <a className="uppercase hidden md:flex font-bold text-[1.7rem] hover:text-neutral-600 ">Sadan Efe's Blog</a>
+                <a className="ease-in-out duration-200 uppercase hidden md:flex font-bold text-[1.6rem] hover:text-neutral-600 ">Sadan Efe's Blog</a>
             </Link>
                     <div>
                     {isAuthenticated ? <div className="flex items-center space-x-3">
                         <img src={user.picture} className="rounded-full" width="40" />
-                        <span className="font-semibold text-lg">{user.name}</span>
+                        <span className="font-semibold text-[1.1rem]">{user.name}</span>
                         <button typeof="button"
                                 className="flex rounded bg-red-500 px-5 py-2 font-semibold
-                                hover:bg-black hover:text-red-500 text-lg ease-in-out duration-200"
+                                hover:bg-black hover:text-red-500 text-[1.1rem] ease-in-out duration-200"
                                 onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
                             Log Out
                         </button>

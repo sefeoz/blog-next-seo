@@ -2,12 +2,37 @@ import { getMdxNode, getMdxPaths } from "next-mdx/server"
 import { useHydrate } from "next-mdx/client"
 import {mdxComponents} from "../../components/mdx-components";
 import { useAuth0 } from "@auth0/auth0-react";
+import {useEffect, useState} from "react";
 
 export default function PostPage({post}){
-    const { loginWithRedirect,logout,isAuthenticated,user} = useAuth0();
+    const { loginWithRedirect,logout,isAuthenticated,user, getAccessTokenSilently} = useAuth0();
+    const [text, textSet] = useState("")
+    const [url, urlSet] = useState(null)
+
+    useEffect(()=>{
+        const url = window.location.origin + window.location.pathname
+        urlSet(url)
+
+
+    }, [])
+
     const content = useHydrate(post, {
         components: mdxComponents,
     })
+    const onSubmit = async (e) => {
+        e.preventDefault()
+        const userToken = await getAccessTokenSilently()
+        const response = await fetch("/api/comment", {
+            method: "POST",
+            body: JSON.stringify({text, userToken, url}),
+            headers:{
+                "Content-Type" : "application/json"
+
+            }
+        })
+        const data = await  response.json()
+        console.log(data)
+    }
 
     return <div className="site-container">
         <article className="pb-20">
@@ -22,8 +47,10 @@ export default function PostPage({post}){
 
 
 
-        <form>
-            <textarea rows="4" className="border border-gray-900 w-full rounded" />
+        <form onSubmit={onSubmit}>
+            <textarea rows="4"
+                      onChange={(e)=>textSet(e.target.value)}
+                      className="border border-gray-900 w-full rounded" />
             {isAuthenticated ? <div className="flex justify-between items-center mt-4">
                 <button className="bg-blue-600 text-white px-5 py-2 text-lg rounded
                 hover:bg-black hover:text-blue-600 ease-in-out duration-200">Send</button>
@@ -33,7 +60,7 @@ export default function PostPage({post}){
                 <button typeof="button"
                         className="flex rounded bg-red-500 px-5 py-2 font-semibold
                                 hover:bg-black hover:text-red-500 text-lg ease-in-out duration-200"
-                        onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
+                        onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL + "/blog"})}>
                     Log Out
                 </button>
             </div>

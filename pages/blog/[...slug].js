@@ -3,15 +3,34 @@ import { useHydrate } from "next-mdx/client"
 import {mdxComponents} from "../../components/mdx-components";
 import { useAuth0 } from "@auth0/auth0-react";
 import {useEffect, useState} from "react";
+import Form from "../../components/form";
+import Comments from "../../components/comments";
+
 
 export default function PostPage({post}){
     const { loginWithRedirect,logout,isAuthenticated,user, getAccessTokenSilently} = useAuth0();
     const [text, textSet] = useState("")
     const [url, urlSet] = useState(null)
+    const [comments, commentsSet] = useState([])
+    const fetchComment = async ()=>{
+        const query = new URLSearchParams({url})
+        const newUrl = `/api/comment?${query.toString()}`
+
+        const response = await fetch(newUrl,{
+          method: "GET"  
+        })
+        const data = await response.json()
+        commentsSet(data)
+    }
+useEffect(()=>{
+    if (!url) return
+    fetchComment()
+},[url])
 
     useEffect(()=>{
         const url = window.location.origin + window.location.pathname
         urlSet(url)
+        
 
 
     }, [])
@@ -22,7 +41,7 @@ export default function PostPage({post}){
     const onSubmit = async (e) => {
         e.preventDefault()
         const userToken = await getAccessTokenSilently()
-        const response = await fetch("/api/comment", {
+        await fetch("/api/comment", {
             method: "POST",
             body: JSON.stringify({text, userToken, url}),
             headers:{
@@ -30,8 +49,8 @@ export default function PostPage({post}){
 
             }
         })
-        const data = await  response.json()
-        console.log(data)
+        fetchComment()
+        textSet("")
     }
 
     return <div className="site-container">
@@ -43,40 +62,14 @@ export default function PostPage({post}){
             <p className="text-end font-thin pt-10">{post.frontMatter.date}</p>
         </article>
 
+        <Form onSubmit={onSubmit} textSet={textSet} text={text} />
+        <Comments comments={comments} />
 
 
 
 
-        <form onSubmit={onSubmit}>
-            <textarea rows="4"
-                      onChange={(e)=>textSet(e.target.value)}
-                      className="border border-gray-900 w-full rounded" />
-            {isAuthenticated ? <div className="flex justify-between items-center mt-4">
-                <button className="bg-blue-600 text-white px-5 py-2 text-lg rounded
-                hover:bg-black hover:text-blue-600 ease-in-out duration-200">Send</button>
-                <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-                <img src={user.picture} width={30} className="rounded-full"  />
-                <span className="font-semibold text-lg">{user.name}</span>
-                <button typeof="button"
-                        className="flex rounded bg-red-500 px-5 py-2 font-semibold
-                                hover:bg-black hover:text-red-500 text-lg ease-in-out duration-200"
-                        onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL + "/blog"})}>
-                    Log Out
-                </button>
-            </div>
-            </div>:<div className="flex justify-end my-4">
 
-                <button typeof="button"
-                        className="rounded bg-green-500 px-5 py-2 font-semibold
-                                hover:bg-black hover:text-green-500 text-lg ease-in-out duration-200"
-                        onClick={() => loginWithRedirect()}>
-                    Log In
-                </button>
-            </div>}
-
-
-        </form>
-
+        
 
     </div>
 }

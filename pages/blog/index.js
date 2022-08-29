@@ -7,7 +7,7 @@ function BlogPage({posts}){
 
            {posts.map(post=>{
                return <article key={post.url}>
-                   <div className="space-y-4 p-5 bg-gradient-to-r from-blue-200 to-pink-50 shadow-xl rounded-[24px]">
+                   <div className="space-y-4 p-5 shadow-xl rounded-[24px]">
                    <h2 className="text-xl font-bold">
                        <Link href={post.url}>
                            <a href="pages/blog/index.js">{post.frontMatter.title}</a>

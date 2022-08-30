@@ -55,11 +55,11 @@ useEffect(()=>{
 
     return <div className="site-container">
         <article className="pb-20">
-            <h1 className="font-bold text-4xl mb-6">{post.frontMatter.title}</h1>
-            <h2 className="font-semibold text-xl mb-6">{post.frontMatter.excerpt}</h2>
-            <hr className="my-3 border-gray-700"/>
-            <div className="prose">{content}</div>
-            <p className="text-end font-thin pt-10">{post.frontMatter.date}</p>
+            <h1 className="font-bold text-4xl mb-6 text-gray-100">{post.frontMatter.title}</h1>
+            <h2 className="font-semibold text-xl mb-6 text-gray-300">{post.frontMatter.excerpt}</h2>
+            <hr className="my-3 border-gray-500 "/>
+            <div className="prose text-gray-200">{content}</div>
+            <p className="text-end font-thin pt-10 text-gray-500">{post.frontMatter.date}</p>
         </article>
 
         <Form onSubmit={onSubmit} textSet={textSet} text={text} />

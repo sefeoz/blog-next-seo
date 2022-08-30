@@ -11,6 +11,13 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.10.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@hapi/boom": "^10.0.0",
+    "babel-plugin-macros": "^3.1.0",
+    "framer-motion": "^7.2.1",
+    "helper": "^0.0.13",
     "ioredis": "^5.2.3",
     "luxon": "^3.0.2",
     "nano-id": "^1.1.0",
@@ -18,7 +25,10 @@
     "next": "^12.2.5",
     "next-mdx": "^0.6.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-head": "^3.4.2",
+    "react-helper": "^4.0.0",
+    "react-router-dom": "6"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",

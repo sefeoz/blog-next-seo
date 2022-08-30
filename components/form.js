@@ -6,22 +6,22 @@ export default function Form({onSubmit,text,textSet}){
     return <div>
         <form onSubmit={onSubmit}>
             <textarea rows="4"
-                      className="border border-gray-900 w-full rounded"
+                      className="border border-zinc-900 w-full bg-zinc-900 rounded text-zinc-200 text-lg"
                        onChange={(e) => textSet(e.target.value)}
                       value={text}
 
             />
             {isAuthenticated ? <div className="flex justify-between items-center mt-4">
                 <button typeof="button" className="bg-blue-600 text-white px-5 py-2 text-lg rounded
-                hover:bg-black hover:text-blue-600 ease-in-out duration-200">
+                hover:bg-inherit hover:text-blue-600 ease-in-out duration-200">
                     Send
                 </button>
                 <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                     <img src={user.picture} width={30} className="rounded-full"  />
-                    <span className="font-semibold text-lg">{user.name}</span>
+                    <span className="font-semibold text-lg text-gray-200">{user.name}</span>
                     <button typeof="button"
                             className="flex rounded bg-red-500 px-5 py-2 font-semibold
-                                hover:bg-black hover:text-red-500 text-lg ease-in-out duration-200"
+                                hover:bg-inherit hover:text-red-500 text-lg ease-in-out duration-200"
                             onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL + "/blog"})}>
                         Log Out
                     </button>
@@ -30,7 +30,7 @@ export default function Form({onSubmit,text,textSet}){
 
                 <button typeof="button"
                         className="rounded bg-green-500 px-5 py-2 font-semibold
-                                hover:bg-black hover:text-green-500 text-lg ease-in-out duration-200"
+                                hover:bg-inherit hover:text-green-500 text-lg ease-in-out duration-200"
                         onClick={() => loginWithRedirect()}>
                     Log In
                 </button>

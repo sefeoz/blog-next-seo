@@ -4,12 +4,12 @@
 
 @layer components{
     .site-container{
-        @apply max-w-5xl mx-auto px-4
+        @apply max-w-3xl mx-auto px-4
     }
     .site-4xl-container{
-        @apply max-w-6xl mx-auto
+        @apply max-w-4xl mx-auto
     }
     body{
-        background-color: #fff1dc;
+        background-color: rgba(0, 0, 0, 0.94);
     }
 }

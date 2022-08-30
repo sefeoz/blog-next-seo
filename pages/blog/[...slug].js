@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import {useEffect, useState} from "react";
 import Form from "../../components/form";
 import Comments from "../../components/comments";
+import {motion} from "framer-motion";
 
 
 export default function PostPage({post}){
@@ -53,7 +54,14 @@ useEffect(()=>{
         textSet("")
     }
 
-    return <div className="site-container">
+    return <motion.div
+        initial={{ y: 5, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -5, opacity: 0 }}
+        transition={{ duration: 0.4 }}
+    >
+
+    <div className="site-container">
         <article className="pb-20">
             <h1 className="font-bold text-4xl mb-6 text-gray-100">{post.frontMatter.title}</h1>
             <h2 className="font-semibold text-xl mb-6 text-gray-300">{post.frontMatter.excerpt}</h2>
@@ -72,6 +80,7 @@ useEffect(()=>{
         
 
     </div>
+    </motion.div>
 }
 export async function getStaticPaths() {
     return {

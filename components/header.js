@@ -10,13 +10,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 
                 <div className="space-x-8 flex items-center text-lg md:text-[1rem] ease-in-out duration-200 text-gray-100 ">
             <Link href="/">
-                <a className="hover:text-purple-800 ease-in-out duration-200 ">Hakkımda</a>
+                <a className="hover:text-purple-600 ease-in-out duration-200 ">Hakkımda</a>
             </Link>
             <Link href="/blog">
-                <a className="hover:text-purple-800 ease-in-out duration-200">Yazılar</a>
+                <a className="hover:text-purple-600 ease-in-out duration-200">Yazılar</a>
             </Link>
                     <Link href="/photos">
-                        <a className="hover:text-purple-800 ease-in-out duration-200">Fotoğraflar</a>
+                        <a className="hover:text-purple-600 ease-in-out duration-200">Fotoğraflar</a>
                     </Link>
 
 

@@ -16,6 +16,11 @@ function PhotosPage({ photos, stats }) {
             <div><img src="/kelmoon.PNG" alt=""/></div>
             <div><img src="/spide.PNG" alt=""/></div>
             <div><img src="/kelblue.PNG" alt=""/></div>
+            <div><img src="/think.PNG" alt=""/></div>
+            <div><img src="/medusa.PNG" alt=""/></div>
+            <div><img src="/kelboi4art.jpg" alt=""/></div>
+            <div><img src="/drip.jpg" alt=""/></div>
+            <div><img src="/bloom.PNG" alt=""/></div>
         </div>
     </div>
             </motion.div>

@@ -65,9 +65,9 @@ function HomePage() {
         </Link>
 
     </div>
-        <div className="site-4xl-container mt-10 mx-2 md:mx-auto">
-            <img className="py-10 saturate-50" src="/me.JPG" alt=""/>
-        </div>
+            <div className="site-4xl-container mt-10  md:mx-auto">
+                <img className="py-10 saturate-50" src="/me.JPG" alt=""/>
+            </div>
     </div>
     </>
         </motion.div>

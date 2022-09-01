@@ -2,6 +2,7 @@ import Link from "next/link";
 import {motion} from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTwitter,faGithub } from "@fortawesome/free-brands-svg-icons";
+
 function HomePage() {
     return(
         <motion.div
@@ -65,7 +66,7 @@ function HomePage() {
         </Link>
 
     </div>
-            <div className="site-4xl-container mt-10  md:mx-auto">
+            <div className="site-4xl-container mt-10 mx-4  md:mx-auto">
                 <img className="py-10 saturate-50" src="/me.JPG" alt=""/>
             </div>
     </div>

@@ -46,19 +46,19 @@ function HomePage() {
         </div>
     <div className=" site-container flex items-center justify-around mt-10">
         <Link href="https://www.instagram.com/sefeoz/">
-            <a className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
+            <a target="_blank" className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
                 <FontAwesomeIcon icon={faInstagram} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
                 Instagram
             </a>
         </Link>
         <Link href="https://twitter.com/sefeoz">
-            <a className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
+            <a target="_blank" className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
                 <FontAwesomeIcon icon={faTwitter} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
                 Twitter
             </a>
         </Link>
         <Link href="https://github.com/kelboindaserver">
-            <a className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
+            <a target="_blank" className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
                 <FontAwesomeIcon icon={faGithub} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
                 GitHub
             </a>

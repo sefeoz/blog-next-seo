@@ -14,10 +14,12 @@ function BlogPage({posts}){
 
             {posts.map(post=>{
                 return <article key={post.url}>
-                    <div className="space-y-8 p-5 shadow-sm shadow-purple-800 backdrop-saturate-50 rounded-[24px]">
-                        <h2 className="text-xl font-bold text-gray-100 hover:text-purple-800 ease-in-out duration-150">
+                    <div className=" border-4 border-purple-800 space-y-8
+                     p-5 rounded-[24px]">
+                        <h2 className="text-xl font-bold text-gray-100 hover:text-purple-800
+                         ease-in-out duration-150">
                             <Link href={post.url}>
-                                <a href="pages/blog/index.js">{post.frontMatter.title}</a>
+                                <a>{post.frontMatter.title}</a>
                             </Link>
                         </h2>
                         <p className="text-gray-200">{post.frontMatter.excerpt}</p>

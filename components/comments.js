@@ -5,7 +5,7 @@ export default function Comments({comments}){
         <div  className="mt-10 mb-48 space-y-6">
             {comments.map(({ id, createdAt, text, user }) => {
                 return (
-                    <div key={id} className="flex items-center  space-x-6">
+                    <div key={id} className="flex items-center  space-x-6 border rounded-xl p-4">
 
                         <img src={user.picture} width={70} className="rounded-full" alt=""/>
                         <div className="space-y-1">

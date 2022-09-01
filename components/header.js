@@ -6,7 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
     return <header className="site-container pb-10 pt-10 lg:pt-5">
 
         <nav>
-            <div className="space-y-6  md:space-y-0 flex flex-col md:flex-row justify-between items-center px-3">
+            <div className="space-y-6  md:space-y-0 flex flex-col md:flex-row justify-center md:space-x-6 items-center px-3">
 
                 <div className="space-x-8 flex items-center text-lg md:text-[1rem] ease-in-out duration-200 text-gray-100 ">
             <Link href="/">
@@ -45,6 +45,6 @@ import { useAuth0 } from "@auth0/auth0-react";
                 </div>
             </div>
         </nav>
-<hr className="mt-2 border-gray-400"/>
+<hr className="mt-4 border-gray-400 hidden md:block "/>
     </header>
 }

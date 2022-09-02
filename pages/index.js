@@ -24,7 +24,8 @@ function HomePage() {
             </h2>
             <p className="text-xl text-gray-300">
                 Yıldız Teknik Üniversitesi'nde HTML ve CSS kurslarına gidip
-                sertifika aldım. Kendi çapımda Web Siteleri yaptım. Adobe uygulamalarında kendimi geliştirdim.
+                sertifika aldım. Kendi çapımda Web Siteleri yaptım. 
+                Adobe uygulamalarında kendimi geliştirdim.
                 Photoshop'da dizayn ve Premiere Pro'da Video Editi yapabiliyorum.
             </p>
             <p className="text-xl text-gray-300">
@@ -37,7 +38,8 @@ function HomePage() {
                 ve illüstirasyonlar yapmaya çalışıyorum.
                 <br/>
                 <Link href="/photos">
-                <a className="underline underline-offset-2 hover:text-purple-600 hover: ease-in-out duration-100">
+                <a className="underline mr-1 underline-offset-2 hover:text-purple-600
+                 ease-in-out duration-100">
                     Fotoğraflar
                 </a>
             </Link>

@@ -9,7 +9,7 @@
     .site-4xl-container{
         @apply max-w-4xl mx-auto
     }
-    body{
+    html{
         background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(10,5,14,1) 77%, rgba(41,22,59,1) 100%);
     }
 }

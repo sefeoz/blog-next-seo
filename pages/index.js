@@ -2,8 +2,12 @@ import Link from "next/link";
 import {motion} from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTwitter,faGithub } from "@fortawesome/free-brands-svg-icons";
+import {useEffect} from "react";
 
 function HomePage() {
+    useEffect(() => {
+        document.title = 'SEFEOZ - BLOG';
+    });
     return(
         <motion.div
             initial={{ y: 5, opacity: 0 }}

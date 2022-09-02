@@ -18,7 +18,7 @@ function BlogPage({posts}){
                     space-y-8 p-5 rounded-[24px] text-center">
                         <div className="flex flex-col  items-center justify-center">
                             <Link href={post.url}>
-                                <a><img src={post.frontMatter.image} width={300} className="rounded-full max-h-[10rem]" alt=""/></a>
+                                <a><img src={post.frontMatter.image} width={300} className="rounded-full max-h-[10rem] hover:shadow-md hover:shadow-dark-blue ease-in-out duration-150" alt=""/></a>
                             </Link>
                             <h2 className="text-xl font-bold text-light-blue hover:text-dark-blue
                          ease-in-out duration-150 mt-4">

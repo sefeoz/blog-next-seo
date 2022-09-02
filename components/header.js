@@ -30,7 +30,7 @@ export default function Header() {
                     <Link href="/photos">
                         <a className={`hover:text-dark-blue ease-in-out duration-200 
                         ${router.pathname === "/photos" ? "text-dark-blue" : ""}`}>
-                            Fotoğraflar
+                            Çizimler
                         </a>
                     </Link>
 
@@ -60,6 +60,6 @@ export default function Header() {
                 </div>
             </div>
         </nav>
-        <hr className="mt-4 border-gray-400 hidden md:block "/>
+        <hr className="mt-4 border-dark-blue hidden md:block "/>
     </header>
 }

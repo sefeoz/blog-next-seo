@@ -15,13 +15,19 @@ function BlogPage({posts}){
             {posts.map(post=>{
                 return <article key={post.url}>
                     <div className=" border-4 border-opacity-60 border-dark-blue
-                    space-y-8 p-5 rounded-[24px]">
-                        <h2 className="text-xl font-bold text-light-blue hover:text-dark-blue
-                         ease-in-out duration-150">
+                    space-y-8 p-5 rounded-[24px] text-center">
+                        <div className="flex flex-col  items-center justify-center">
                             <Link href={post.url}>
-                                <a>{post.frontMatter.title}</a>
+                                <a><img src={post.frontMatter.image} width={300} className="rounded-full max-h-[10rem]" alt=""/></a>
                             </Link>
-                        </h2>
+                            <h2 className="text-xl font-bold text-light-blue hover:text-dark-blue
+                         ease-in-out duration-150 mt-4">
+                                <Link href={post.url}>
+                                    <a>{post.frontMatter.title}</a>
+                                </Link>
+                            </h2>
+
+                        </div>
                         <p className="text-semi-blue">{post.frontMatter.excerpt}</p>
                         <div className="text-slate-600" >
                             <span>{post.frontMatter.date}</span>

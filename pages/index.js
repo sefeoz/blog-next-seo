@@ -35,12 +35,12 @@ function HomePage() {
             </p>
             <p className="text-lg text-normal-blue">
                 Kendi çapımda ufak tefek Graffiti çalışmaları
-                ve illüstirasyonlar yapmaya çalışıyorum.
+                ve illüstrasyonlar yapmaya çalışıyorum.
                 <br/>
                 <Link href="/photos">
                 <a className="underline mr-1 underline-offset-2 hover:text-dark-blue
                  ease-in-out duration-100">
-                    Fotoğraflar
+                    Çizimler
                 </a>
             </Link>
                 kısmına tıklayarak ulaşabilirsiniz.

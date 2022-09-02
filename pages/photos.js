@@ -11,6 +11,8 @@ function PhotosPage({ photos, stats }) {
 
 
     <div className="site-4xl-container mx-5 lg:mx-auto">
+        <p className="text-lg text-normal-blue mb-10 site-container">Kendi Çapımda Photoshop ve Procreate kullanarak illüstrasyon ve çizim çalışmaları yapıyorum. <br/>
+            Çocukluğumdan beri sürekli bir şeyler çizmekten zevk alıyorum.</p>
         <div className="columns-xs gap-6 space-y-6 ">
             <div><img src="/kelscratch.PNG" alt=""/></div>
             <div><img src="/kelmoon.PNG" alt=""/></div>

@@ -9,21 +9,21 @@ function BlogPage({posts}){
         exit={{ y: -5, opacity: 0 }}
         transition={{ duration: 0.4 }}
     >
-    <div className="site-container">
-        <div className="space-y-4 ">
+    <div className="site-container pb-16">
+        <div className="space-y-4">
 
             {posts.map(post=>{
                 return <article key={post.url}>
-                    <div className=" border-4 border-opacity-30 border-purple-600
+                    <div className=" border-4 border-opacity-60 border-dark-blue
                     space-y-8 p-5 rounded-[24px]">
-                        <h2 className="text-xl font-bold text-gray-100 hover:text-purple-800
+                        <h2 className="text-xl font-bold text-light-blue hover:text-dark-blue
                          ease-in-out duration-150">
                             <Link href={post.url}>
                                 <a>{post.frontMatter.title}</a>
                             </Link>
                         </h2>
-                        <p className="text-gray-200">{post.frontMatter.excerpt}</p>
-                        <div className="text-gray-500">
+                        <p className="text-semi-blue">{post.frontMatter.excerpt}</p>
+                        <div className="text-slate-600" >
                             <span>{post.frontMatter.date}</span>
                         </div>
                     </div>

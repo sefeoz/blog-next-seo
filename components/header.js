@@ -10,26 +10,26 @@ export default function Header() {
         <nav>
             <div className="space-y-6  md:space-y-0 flex flex-col md:flex-row justify-around md:space-x-6 items-center px-3">
                 <Link href="/">
-                    <a className="uppercase text-gray-100 hover:text-purple-600
+                    <a className="uppercase text-light-blue hover:text-dark-blue
                     ease-in-out duration-200 font-bold text-[1.35rem]">sefeoz</a>
                 </Link>
 
-                <div className="space-x-8 flex items-center text-lg md:text-[1rem] ease-in-out duration-200 text-gray-100 ">
+                <div className="space-x-8 flex items-center text-lg md:text-[1rem] ease-in-out duration-200 text-light-blue ">
                     <Link href="/">
-                        <a className={`hover:text-purple-600 ease-in-out duration-200 
-                        ${router.pathname === "/" ? "text-purple-600" : "text-brand-darkblue"}`}>
+                        <a className={`hover:text-dark-blue ease-in-out duration-200 
+                        ${router.pathname === "/" ? "text-dark-blue" : "text-brand-darkblue"}`}>
                             Hakkımda
                         </a>
                     </Link>
                     <Link href="/blog">
-                        <a className={`hover:text-purple-600 ease-in-out duration-200 
-                        ${router.pathname === `/blog` ? "text-purple-600" : "text-brand-darkblue"}`}>
+                        <a className={`hover:text-dark-blue ease-in-out duration-200 
+                        ${router.pathname === `/blog` ? "text-dark-blue" : "text-brand-darkblue"}`}>
                             Yazılar
                         </a>
                     </Link>
                     <Link href="/photos">
-                        <a className={`hover:text-purple-600 ease-in-out duration-200 
-                        ${router.pathname === "/photos" ? "text-purple-600" : ""}`}>
+                        <a className={`hover:text-dark-blue ease-in-out duration-200 
+                        ${router.pathname === "/photos" ? "text-dark-blue" : ""}`}>
                             Fotoğraflar
                         </a>
                     </Link>

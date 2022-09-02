@@ -16,29 +16,29 @@ function HomePage() {
         <div className="site-container">
             <div className="space-y-4 mx-5 md:mx-0">
 
-            <h1 className="text-3xl font-bold text-gray-100">
+            <h1 className="text-3xl font-bold text-light-blue">
                 Merhabalar. Ben Şadan Efe ÖZ.
             </h1>
-            <h2 className="text-2xl font-semibold text-gray-200">
+            <h2 className="text-2xl font-semibold text-semi-blue">
                 İstinye Üniversitesi'nde Yazılım Mühendisliği okuyorum.
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-lg text-normal-blue">
                 Yıldız Teknik Üniversitesi'nde HTML ve CSS kurslarına gidip
                 sertifika aldım. Kendi çapımda Web Siteleri yaptım. 
                 Adobe uygulamalarında kendimi geliştirdim.
                 Photoshop'da dizayn ve Premiere Pro'da Video Editi yapabiliyorum.
             </p>
-            <p className="text-xl text-gray-300">
+            <p className="text-lg text-normal-blue">
                 Basketbol oynamayı,
                 teknoloji haberleri okumayı ve video oyunları oynamayı seviyorum.
             Yeni bir şeyler üretmekten veya öğrenmekten keyif alıyorum.
             </p>
-            <p className="text-xl text-gray-300">
+            <p className="text-lg text-normal-blue">
                 Kendi çapımda ufak tefek Graffiti çalışmaları
                 ve illüstirasyonlar yapmaya çalışıyorum.
                 <br/>
                 <Link href="/photos">
-                <a className="underline mr-1 underline-offset-2 hover:text-purple-600
+                <a className="underline mr-1 underline-offset-2 hover:text-dark-blue
                  ease-in-out duration-100">
                     Fotoğraflar
                 </a>
@@ -49,19 +49,19 @@ function HomePage() {
         </div>
     <div className=" site-container flex items-center justify-around mt-10">
         <Link href="https://www.instagram.com/sefeoz/">
-            <a target="_blank" className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
+            <a target="_blank" className="flex items-center text-light-blue hover:text-dark-blue ease-in-out duration-200">
                 <FontAwesomeIcon icon={faInstagram} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
                 Instagram
             </a>
         </Link>
         <Link href="https://twitter.com/sefeoz">
-            <a target="_blank" className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
+            <a target="_blank" className="flex items-center text-light-blue hover:text-dark-blue ease-in-out duration-200">
                 <FontAwesomeIcon icon={faTwitter} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
                 Twitter
             </a>
         </Link>
         <Link href="https://github.com/kelboindaserver">
-            <a target="_blank" className="flex items-center text-gray-300 hover:text-purple-600 ease-in-out duration-200">
+            <a target="_blank" className="flex items-center text-light-blue hover:text-dark-blue ease-in-out duration-200">
                 <FontAwesomeIcon icon={faGithub} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
                 GitHub
             </a>

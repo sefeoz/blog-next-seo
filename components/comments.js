@@ -5,15 +5,15 @@ export default function Comments({comments}){
         <div  className="mt-10 mb-48 space-y-6">
             {comments.map(({ id, createdAt, text, user }) => {
                 return (
-                    <div key={id} className="flex items-center  space-x-6 border rounded-xl p-4">
+                    <div key={id} className="flex items-center  space-x-6 border border-normal-blue rounded-xl p-4">
 
                         <img src={user.picture} width={70} className="rounded-full" alt=""/>
                         <div className="space-y-1">
                             <div className="space-x-4">
-                                <b className="text-gray-200 text-lg">{user.name}</b>
-                                <time className="text-gray-500">{DateTime.fromMillis(createdAt).toRelative()}</time>
+                                <b className="text-light-blue text-lg">{user.name}</b>
+                                <time className="text-slate-600">{DateTime.fromMillis(createdAt).toRelative()}</time>
                             </div>
-                            <p className="text-zinc-200 text-[1.04rem]">{text}</p>
+                            <p className="text-normal-blue text-[1.04rem]">{text}</p>
 
 
                         </div>

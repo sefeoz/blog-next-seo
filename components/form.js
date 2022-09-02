@@ -6,7 +6,7 @@ export default function Form({onSubmit,text,textSet}){
     return <div>
         <form onSubmit={onSubmit}>
             <textarea rows="4"
-                      className="border border-zinc-900 w-full bg-zinc-900 rounded text-zinc-200 text-lg"
+                      className="border border-dark-blue w-full bg-zinc-900 rounded-lg text-zinc-200 text-lg"
                        onChange={(e) => textSet(e.target.value)}
                       value={text}
 

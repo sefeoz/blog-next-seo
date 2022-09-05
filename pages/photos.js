@@ -1,6 +1,10 @@
 import {motion} from "framer-motion";
+import {useEffect} from "react";
 
 function PhotosPage({ photos, stats }) {
+    useEffect(() => {
+        document.title = 'Çizimler - Ş. EFE ÖZ';
+    });
     return <motion.div
         initial={{ y: 5, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -1,8 +1,12 @@
 import { getAllNodes } from 'next-mdx/server'
 import Link from 'next/link';
 import {motion} from "framer-motion";
+import {useEffect} from "react";
 
 function BlogPage({posts}){
+    useEffect(() => {
+        document.title = 'Yazılar - Ş. EFE ÖZ';
+    });
     return  <motion.div
         initial={{ y: 5, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

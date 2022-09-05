@@ -20,6 +20,9 @@
     "babel-plugin-macros": "^3.1.0",
     "framer-motion": "^7.2.1",
     "helper": "^0.0.13",
+    "i18next": "^21.9.1",
+    "i18next-browser-languagedetector": "^6.1.5",
+    "i18next-http-backend": "^1.4.1",
     "ioredis": "^5.2.3",
     "luxon": "^3.0.2",
     "nano-id": "^1.1.0",
@@ -30,6 +33,7 @@
     "react-dom": "^18.2.0",
     "react-head": "^3.4.2",
     "react-helper": "^4.0.0",
+    "react-i18next": "^11.18.5",
     "react-router-dom": "6"
   },
   "devDependencies": {

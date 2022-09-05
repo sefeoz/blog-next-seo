@@ -11,7 +11,7 @@ export default function Header() {
             <div className="space-y-6  md:space-y-0 flex flex-col md:flex-row justify-around md:space-x-6 items-center px-3">
                 <Link href="/">
                     <a className="uppercase text-light-blue hover:text-dark-blue
-                    ease-in-out duration-200 font-bold text-[1.35rem]">sefeoz</a>
+                    ease-in-out duration-200 font-bold text-[1.35rem]">s. efe öz</a>
                 </Link>
 
                 <div className="space-x-8 flex items-center text-lg md:text-[1rem] ease-in-out duration-200 text-light-blue ">

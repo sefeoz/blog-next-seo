@@ -3,7 +3,7 @@ import {DateTime} from "/node_modules/luxon/build/es6/luxon";
 export default function Comments({comments}){
     return(
         <div  className="mt-10 mb-48 space-y-6">
-            {comments.map(({ id, createdAt, text, user }) => {
+            {comments.map(({ id, createdAt, text, user}) => {
                 return (
                     <div key={id} className="flex items-center  space-x-6 border border-normal-blue rounded-xl p-4">
 

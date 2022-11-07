@@ -20,7 +20,7 @@ export default function Form({onSubmit,text,textSet}){
                     <img src={user.picture} width={30} className="rounded-full"  />
                     <span className="font-semibold text-lg text-gray-200">{user.name}</span>
                     <button typeof="button"
-                            className="flex rounded bg-red-500 px-5 py-2 font-semibold
+                            className="flex rounded bg-red-500 lato px-5 py-2 font-semibold
                                 hover:bg-inherit hover:text-red-500 text-lg ease-in-out duration-200"
                             onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL + "/blog"})}>
                         Log Out
@@ -29,7 +29,7 @@ export default function Form({onSubmit,text,textSet}){
             </div>:<div className="flex justify-end my-4">
 
                 <button typeof="button"
-                        className="rounded bg-green-500 px-5 py-2 font-semibold
+                        className="rounded bg-green-500 px-5 lato py-2 font-semibold
                                 hover:bg-inherit hover:text-green-500 text-lg ease-in-out duration-200"
                         onClick={() => loginWithRedirect()}>
                     Log In

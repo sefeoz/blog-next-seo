@@ -10,10 +10,10 @@ export default function Comments({comments}){
                         <img src={user.picture} width={70} className="rounded-full" alt=""/>
                         <div className="space-y-1">
                             <div className="space-x-4">
-                                <b className="text-light-blue text-lg">{user.name}</b>
-                                <time className="text-slate-600">{DateTime.fromMillis(createdAt).toRelative()}</time>
+                                <b className="text-light-blue text-lg raleway-semibold">{user.name}</b>
+                                <time className="text-slate-600 raleway-light">{DateTime.fromMillis(createdAt).toRelative()}</time>
                             </div>
-                            <p className="text-normal-blue text-[1.04rem]">{text}</p>
+                            <p className="text-normal-blue text-[1.04rem] raleway-md">{text}</p>
 
 
                         </div>

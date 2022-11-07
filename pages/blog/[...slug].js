@@ -63,8 +63,8 @@ useEffect(()=>{
 
     <div className="site-container">
         <article className="pb-20">
-            <h1 className="font-bold text-4xl mb-6 text-light-blue">{post.frontMatter.title}</h1>
-            <h2 className="font-semibold text-xl mb-6 text-semi-blue">{post.frontMatter.excerpt}</h2>
+            <h1 className=" text-4xl mb-6 text-light-blue raleway-light">{post.frontMatter.title}</h1>
+            <h2 className="ralraleway-md text-xl mb-6 text-semi-blue">{post.frontMatter.excerpt}</h2>
             <hr className="my-3 border-gray-500 "/>
             <div className="prose text-normal-blue">{content}</div>
             <p className="text-end font-thin pt-10 text-gray-500">{post.frontMatter.date}</p>

@@ -1,4 +1,4 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Lato:wght@700&family=Raleway:wght@300;500;600&display=swap');@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -12,6 +12,24 @@
    
      html{
     background:#0b0f14
+    }
+    .lato{
+        font-family: 'Lato', sans-serif;
+    }
+    .kanit{
+        font-family: 'Kanit', sans-serif;
+    }
+    .raleway-light{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+    }
+    .raleway-md{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+    }
+    .raleway-semibold{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
     }
 
 }

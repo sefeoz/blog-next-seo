@@ -20,24 +20,24 @@ function HomePage() {
         <div className="site-container">
             <div className="space-y-4 mx-5 md:mx-0">
 
-            <h1 className="text-3xl font-bold text-light-blue">
+            <h1 className="raleway-light text-3xl  text-light-blue">
                 Merhabalar. Ben Şadan Efe ÖZ.
             </h1>
-            <h2 className="text-2xl font-semibold text-semi-blue">
+            <h2 className="text-2xl raleway-md text-semi-blue">
                 İstinye Üniversitesi'nde Yazılım Mühendisliği okuyorum.
             </h2>
-            <p className="text-lg text-normal-blue">
+            <p className="text-lg text-normal-blue raleway-semibold">
                 Yıldız Teknik Üniversitesi'nde HTML ve CSS kurslarına gidip
                 sertifika aldım. Kendi çapımda Web Siteleri yaptım. 
                 Adobe uygulamalarında kendimi geliştirdim.
                 Photoshop'da dizayn ve Premiere Pro'da Video Editi yapabiliyorum.
             </p>
-            <p className="text-lg text-normal-blue">
+            <p className="text-lg text-normal-blue raleway-semibold">
                 Basketbol oynamayı,
                 teknoloji haberleri okumayı ve video oyunları oynamayı seviyorum.
             Yeni bir şeyler üretmekten veya öğrenmekten keyif alıyorum.
             </p>
-            <p className="text-lg text-normal-blue">
+            <p className="text-lg text-normal-blue raleway-semibold">
                 Kendi çapımda ufak tefek Graffiti çalışmaları
                 ve illüstrasyonlar yapmaya çalışıyorum.
                 <br/>
@@ -47,11 +47,11 @@ function HomePage() {
                     Çizimler
                 </a>
             </Link>
-                kısmına tıklayarak ulaşabilirsiniz.
+                kısmından ulaşabilirsiniz.
             </p>
             </div>
         </div>
-    <div className=" site-container flex items-center justify-around mt-10">
+    <div className=" site-container flex items-center justify-around mt-10 raleway-semibold">
         <Link href="https://www.instagram.com/sefeoz/">
             <a target="_blank" className="flex items-center text-light-blue hover:text-dark-blue ease-in-out duration-200">
                 <FontAwesomeIcon icon={faInstagram} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
@@ -73,7 +73,7 @@ function HomePage() {
 
     </div>
             <div className="site-4xl-container mt-10 mx-4  md:mx-auto">
-                <img className="py-10 saturate-50" src="/me.JPG" alt=""/>
+                <img className="py-10 saturate-50" src="/me-1.png" alt=""/>
             </div>
     </div>
     </>

@@ -11,7 +11,8 @@
     }
    
      html{
-    background:#0b0f14
+         background:url("/bg.png");
+         @apply bg-center bg-fixed
     }
     .lato{
         font-family: 'Lato', sans-serif;

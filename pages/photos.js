@@ -18,15 +18,15 @@ function PhotosPage({ photos, stats }) {
         <p className="text-lg text-normal-blue mb-10 site-container">Kendi Çapımda Photoshop ve Procreate kullanarak illüstrasyon ve çizim çalışmaları yapıyorum. <br/>
             Çocukluğumdan beri sürekli bir şeyler çizmekten zevk alıyorum.</p>
         <div className="columns-xs gap-6 space-y-6">
-            <div><img src="/kelscratch.PNG" alt=""/></div>
-            <div><img src="/kelmoon.PNG" alt=""/></div>
-            <div><img src="/spide.PNG" alt=""/></div>
-            <div><img src="/kelblue.PNG" alt=""/></div>
-            <div><img src="/think.PNG" alt=""/></div>
-            <div><img src="/medusa.PNG" alt=""/></div>
-            <div><img src="/kelboi4art.jpg" alt=""/></div>
-            <div><img src="/drip.jpg" alt=""/></div>
-            <div><img src="/bloom.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/kelscratch.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/kelmoon.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/spide.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/kelblue.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/think.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/medusa.PNG" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/kelboi4art.jpg" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/drip.jpg" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/bloom.PNG" alt=""/></div>
         </div>
     </div>
             </motion.div>

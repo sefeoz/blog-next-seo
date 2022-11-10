@@ -19,7 +19,7 @@ function BlogPage({posts}){
             {posts.map(post=>{
                 return <article key={post.url}>
                     <div className=" border-4 border-opacity-60 border-dark-blue
-                    space-y-8 p-5 rounded-[24px] text-center">
+                    space-y-8 p-5 rounded-[24px] text-center bg-dark-blue bg-opacity-20">
                         <div className="flex flex-col  items-center justify-center">
                             <Link href={post.url}>
                                 <a><img src={post.frontMatter.image} width={300} className="rounded-xl max-h-[10rem] hover:shadow-md hover:shadow-dark-blue ease-in-out duration-150" alt=""/></a>

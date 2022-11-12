@@ -73,7 +73,7 @@ function HomePage() {
 
     </div>
             <div className="site-4xl-container mt-10 mx-4 md:mx-auto">
-                <img className="py-10 saturate-50 max-w-4xl" src="/me.JPG" alt=""/>
+                <img className="py-10 saturate-50" src="/me.JPG" alt=""/>
             </div>
     </div>
     </>

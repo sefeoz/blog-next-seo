@@ -15,9 +15,11 @@ function PhotosPage({ photos, stats }) {
 
 
     <div className="mx-5 lg:mx-auto lg:px-32">
-        <p className="text-lg text-normal-blue mb-10 site-container">Kendi Çapımda Photoshop ve Procreate kullanarak illüstrasyon ve çizim çalışmaları yapıyorum. <br/>
-            Çocukluğumdan beri sürekli bir şeyler çizmekten zevk alıyorum.</p>
         <div className="columns-xs gap-6 space-y-6">
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/space-kel.png" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/teal-kel.png" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/purple-kel.png" alt=""/></div>
+            <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/designed-kel.png" alt=""/></div>
             <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/kelscratch.PNG" alt=""/></div>
             <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/kelmoon.PNG" alt=""/></div>
             <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/spide.PNG" alt=""/></div>

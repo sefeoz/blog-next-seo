@@ -1,36 +1,36 @@
 import Link from "next/link";
 import { useAuth0 } from "@auth0/auth0-react";
 import {useRouter} from "next/router";
+import {useEffect} from "react";
 export default function Header() {
     const { loginWithRedirect,logout,isAuthenticated,user} = useAuth0();
     const router = useRouter();
-
     return <header className="site-container pb-10 pt-10 lg:pt-5">
 
         <nav>
             <div className="space-y-6  md:space-y-0 flex flex-col md:flex-row justify-around md:space-x-6 items-center px-3">
                 <Link href="/">
-                    <a className=" kanit uppercase text-light-blue hover:text-dark-blue
-                    ease-in-out duration-200 font-bold text-[1.35rem]">ş. efe öz</a>
+                    <a className="kanit uppercase text-light-blue hover:text-dark-blue
+                    ease-in-out duration-200 font-bold text-[1.35rem]">s. efe öz</a>
                 </Link>
 
                 <div className="lato space-x-8 flex items-center text-lg md:text-[1rem] ease-in-out duration-200 text-light-blue ">
                     <Link href="/">
                         <a className={`hover:text-dark-blue ease-in-out duration-200 
                         ${router.pathname === "/" ? "text-dark-blue" : "text-brand-darkblue"}`}>
-                            Hakkımda
+                            About
                         </a>
                     </Link>
                     <Link href="/blog">
                         <a className={`hover:text-dark-blue ease-in-out duration-200 
                         ${router.pathname === `/blog` ? "text-dark-blue" : "text-brand-darkblue"}`}>
-                            Yazılar
+                            Blog
                         </a>
                     </Link>
-                    <Link href="/photos">
-                        <a className={`hover:text-dark-blue ease-in-out duration-200 
-                        ${router.pathname === "/photos" ? "text-dark-blue" : ""}`}>
-                            Çizimler
+                    <Link href="/art">
+                        <a  className={`hover:text-dark-blue ease-in-out duration-200 
+                        ${router.pathname === "/art" ? "text-dark-blue" : ""}`}>
+                            Art
                         </a>
                     </Link>
 

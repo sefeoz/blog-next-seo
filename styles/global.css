@@ -12,7 +12,7 @@
    
      html{
          background:url("/bg.png");
-         @apply bg-center bg-fixed
+         @apply bg-fixed bg-repeat
     }
     .lato{
         font-family: 'Lato', sans-serif;

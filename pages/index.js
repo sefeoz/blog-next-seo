@@ -17,41 +17,44 @@ function HomePage() {
         >
     <>
         <div className="bg">
-        <div className="site-container">
-            <div className="space-y-4 mx-5 md:mx-0">
+        <div className="site-4xl-container mx-5 lg:mx-auto flex flex-col md:flex-row items-center">
+            <div className="max-w-2xl m-6 border-2 rounded-xl p-2 bg-zinc-100 bg-opacity-20  md:basis-1/2">
+                <img className="rounded-xl saturate-50" src="me.jpg" alt=""/>
+            </div>
+            <div className="space-y-4 mx-5 md:mx-0 md:basis-1/2 text-center md:text-left ">
 
-            <h1 className="raleway-light text-3xl  text-light-blue">
-                Merhabalar. Ben Şadan Efe ÖZ.
+            <h1 className="raleway-light text-3xl text-light-blue">
+                Hello. I'm Sadan Efe.
             </h1>
             <h2 className="text-2xl raleway-md text-semi-blue">
-                İstinye Üniversitesi'nde Yazılım Mühendisliği okuyorum.
+                I'm studying Software Engineering at Istinye University.
             </h2>
-            <p className="text-lg text-normal-blue raleway-semibold">
-                Yıldız Teknik Üniversitesi'nde HTML ve CSS kurslarına gidip
-                sertifika aldım. Kendi çapımda Web Siteleri yaptım. 
-                Adobe uygulamalarında kendimi geliştirdim.
-                Photoshop'da dizayn ve Premiere Pro'da Video Editi yapabiliyorum.
-            </p>
-            <p className="text-lg text-normal-blue raleway-semibold">
-                Basketbol oynamayı,
-                teknoloji haberleri okumayı ve video oyunları oynamayı seviyorum.
-            Yeni bir şeyler üretmekten veya öğrenmekten keyif alıyorum.
-            </p>
-            <p className="text-lg text-normal-blue raleway-semibold">
-                Kendi çapımda ufak tefek Graffiti çalışmaları
-                ve illüstrasyonlar yapmaya çalışıyorum.
-                <br/>
-                <Link href="/photos">
-                <a className="underline mr-1 underline-offset-2 hover:text-dark-blue
-                 ease-in-out duration-100">
-                    Çizimler
-                </a>
-            </Link>
-                kısmından ulaşabilirsiniz.
-            </p>
             </div>
-        </div>
-    <div className=" site-container flex items-center justify-around mt-10 raleway-semibold">
+            </div>
+            <div className="site-4xl-container space-y-4 m-8 lg:mx-auto">
+                <p className="text-lg text-normal-blue raleway-semibold">
+                    I have HTML and CSS certificate from Yıldız Teknik University and created Websites.
+                    I improved myself on Adobe products. I can design in Photoshop and edit video in Premiere Pro.
+                </p>
+                <p className="text-lg text-normal-blue raleway-semibold">
+                    I love playing basketball, reading technology news and playing video games with friends.
+                    I enjoy creating or learning new things.
+                </p>
+                <p className="text-lg text-normal-blue raleway-semibold">
+                    I'm trying do Graffiti and Illustration for personal.
+
+                    <br/>
+                    You can check it on
+                    <Link href="/art">
+                        <a className="underline mx-1 underline-offset-2 hover:text-dark-blue
+                 ease-in-out duration-100">
+                            Art
+                        </a>
+                    </Link>
+                    page.
+                </p>
+            </div>
+    <div className=" site-container flex items-center justify-around mt-10 mb-20 raleway-semibold">
         <Link href="https://www.instagram.com/sefeoz/">
             <a target="_blank" className="flex items-center text-light-blue hover:text-dark-blue ease-in-out duration-200">
                 <FontAwesomeIcon icon={faInstagram} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
@@ -72,9 +75,6 @@ function HomePage() {
         </Link>
 
     </div>
-            <div className="site-4xl-container mt-10 mx-4 md:mx-auto">
-                <img className="py-10 saturate-50" src="/me.JPG" alt=""/>
-            </div>
     </div>
     </>
         </motion.div>

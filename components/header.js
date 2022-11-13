@@ -8,7 +8,7 @@ export default function Header() {
     return <header className="site-container pb-10 pt-10 lg:pt-5">
 
         <nav>
-            <div className="space-y-6  md:space-y-0 flex flex-col md:flex-row justify-around md:space-x-6 items-center px-3">
+            <div className="space-y-6 bg-dark bg-opacity-20  md:space-y-0 flex flex-col md:flex-row justify-around md:space-x-6 items-center border p-5 rounded-xl border-light-blue">
                 <Link href="/">
                     <a className="kanit uppercase text-light-blue hover:text-dark-blue
                     ease-in-out duration-200 font-bold text-[1.35rem]">s. efe öz</a>
@@ -60,6 +60,5 @@ export default function Header() {
                 </div>
             </div>
         </nav>
-        <hr className="mt-4 border-dark-blue hidden md:block "/>
     </header>
 }

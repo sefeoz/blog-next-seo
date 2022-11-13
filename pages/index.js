@@ -19,7 +19,7 @@ function HomePage() {
         <div className="bg">
         <div className="site-4xl-container mx-5 lg:mx-auto flex flex-col md:flex-row items-center">
             <div className="max-w-2xl m-6 border-2 rounded-xl p-2 bg-zinc-100 bg-opacity-20  md:basis-1/2">
-                <img className="rounded-xl saturate-50" src="me.jpg" alt=""/>
+                <img className="rounded-xl saturate-50" src="/me.jpg" alt=""/>
             </div>
             <div className="space-y-4 mx-5 md:mx-0 md:basis-1/2 text-center md:text-left ">
 

@@ -11,7 +11,7 @@
     }
    
      html{
-         background:url("/bg.png");
+         background:url("/background.PNG");
          @apply bg-fixed bg-repeat bg-dark
     }
     .lato{

@@ -5,7 +5,7 @@ import {useEffect} from "react";
 
 function BlogPage({posts}){
     useEffect(() => {
-        document.title = 'Yazılar - Ş. EFE ÖZ';
+        document.title = 'Blog - S. EFE OZ';
     });
     return  <motion.div
         initial={{ y: 5, opacity: 0 }}
@@ -18,13 +18,13 @@ function BlogPage({posts}){
 
             {posts.map(post=>{
                 return <article key={post.url}>
-                    <div className=" border-4 border-opacity-60 border-dark-blue
-                    space-y-8 p-5 rounded-[24px] text-center bg-dark-blue bg-opacity-20">
+                    <div className=" border-4 border-opacity-80 border-gray-300
+                    space-y-8 p-5 rounded-[24px] text-center bg-gray-400 bg-opacity-20">
                         <div className="flex flex-col  items-center justify-center">
                             <Link href={post.url}>
-                                <a><img src={post.frontMatter.image} width={300} className="rounded-xl max-h-[10rem] hover:shadow-md hover:shadow-dark-blue ease-in-out duration-150" alt=""/></a>
+                                <a><img src={post.frontMatter.image} width={300} className="rounded-xl max-h-[10rem] hover:shadow-lg hover:shadow-zinc-300 ease-in-out duration-150 mb-5" alt=""/></a>
                             </Link>
-                            <h2 className="text-xl lato text-light-blue hover:text-dark-blue
+                            <h2 className="text-xl lato text-white hover:text-gray-400
                          ease-in-out duration-150 mt-4">
                                 <Link href={post.url}>
                                     <a>{post.frontMatter.title}</a>
@@ -32,8 +32,8 @@ function BlogPage({posts}){
                             </h2>
 
                         </div>
-                        <p className="text-semi-blue raleway-semibold">{post.frontMatter.excerpt}</p>
-                        <div className="text-slate-600" >
+                        <p className="text-gray-300 raleway-semibold">{post.frontMatter.excerpt}</p>
+                        <div className="text-slate-200" >
                             <span>{post.frontMatter.date}</span>
                         </div>
                     </div>

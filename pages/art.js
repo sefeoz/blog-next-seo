@@ -3,7 +3,7 @@ import {useEffect} from "react";
 
 function PhotosPage({ photos, stats }) {
     useEffect(() => {
-        document.title = 'Çizimler - Ş. EFE ÖZ';
+        document.title = 'Art - S. EFE OZ';
     });
     return <motion.div
         initial={{ y: 5, opacity: 0 }}

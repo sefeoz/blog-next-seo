@@ -63,11 +63,11 @@ useEffect(()=>{
 
     <div className="site-container">
         <article className="pb-20">
-            <h1 className=" text-4xl mb-6 text-light-blue raleway-light">{post.frontMatter.title}</h1>
-            <h2 className="ralraleway-md text-xl mb-6 text-semi-blue">{post.frontMatter.excerpt}</h2>
-            <hr className="my-3 border-gray-500 "/>
-            <div className="prose text-normal-blue">{content}</div>
-            <p className="text-end font-thin pt-10 text-gray-500">{post.frontMatter.date}</p>
+            <h1 className=" text-4xl mb-6 text-white raleway-light">{post.frontMatter.title}</h1>
+            <h2 className="raleway-md text-xl mb-6 text-gray-300">{post.frontMatter.excerpt}</h2>
+            <hr className="my-3 border-white "/>
+            <div className="prose">{content}</div>
+            <p className="text-end font-thin pt-10 text-gray-400">{post.frontMatter.date}</p>
         </article>
 
         <Form onSubmit={onSubmit} textSet={textSet} text={text} />

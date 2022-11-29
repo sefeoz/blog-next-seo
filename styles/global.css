@@ -11,8 +11,9 @@
     }
    
      html{
-         background:url("/background.PNG");
-         @apply bg-fixed bg-repeat bg-dark
+         background-image:url("/background.PNG");
+         background-color: #121212;
+         @apply bg-fixed bg-repeat
     }
     .lato{
         font-family: 'Lato', sans-serif;

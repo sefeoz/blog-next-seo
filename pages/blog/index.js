@@ -18,7 +18,8 @@ function BlogPage({posts}){
 
             {posts.map(post=>{
                 return <article key={post.url}>
-                    <div className=" border-4 border-opacity-80 border-gray-300
+                    <div className={"max-w-xl mx-auto"}>
+                    <div className=" border-4 border-opacity-80  border-gray-300
                     space-y-8 p-5 rounded-[24px] text-center bg-gray-400 bg-opacity-20">
                         <div className="flex flex-col  items-center justify-center">
                             <Link href={post.url}>
@@ -36,6 +37,7 @@ function BlogPage({posts}){
                         <div className="text-slate-200" >
                             <span>{post.frontMatter.date}</span>
                         </div>
+                    </div>
                     </div>
                 </article>
             })}

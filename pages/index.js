@@ -6,7 +6,7 @@ import {useEffect} from "react";
 
 function HomePage() {
     useEffect(() => {
-        document.title = 'Blog - Ş. EFE ÖZ';
+        document.title = 'About - S. EFE OZ';
     });
     return(
         <motion.div

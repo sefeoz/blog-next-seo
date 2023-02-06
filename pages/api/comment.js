@@ -37,6 +37,8 @@ export default async function handler(req, res) {
                 name: user.name,
                 picture: user.picture
             },
+            btn,
+            
         }
         let redis = new Redis(process.env.REDIS_URL)
 
@@ -55,7 +57,7 @@ export default async function handler(req, res) {
     //FETCH
     if (req.method === "GET") {
         const {url} = req.query
-        
+
         let redis = new Redis(process.env.REDIS_URL)
         const comments = await redis.lrange(url,0,-1)
         redis.quit()
@@ -65,3 +67,4 @@ export default async function handler(req, res) {
 
     }
 }
+

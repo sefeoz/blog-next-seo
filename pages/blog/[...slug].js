@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import Form from "../../components/form";
 import Comments from "../../components/comments";
 import {motion} from "framer-motion";
+import {cloneUniformsGroups} from "three/src/renderers/shaders/UniformsUtils";
 
 
 export default function PostPage({post}){
@@ -22,10 +23,12 @@ export default function PostPage({post}){
         })
         const data = await response.json()
         commentsSet(data)
+
     }
+    
 useEffect(()=>{
     if (!url) return
-    fetchComment()
+    fetchComment();
 },[url])
 
     useEffect(()=>{
@@ -53,7 +56,14 @@ useEffect(()=>{
         fetchComment()
         textSet("")
     }
+    useEffect(()=>{
+        const remove = document.getElementById("remove");
+        const btn = document.getElementById("button");
 
+        if (user?.sub != "github|69189063"){
+            remove?.removeChild(btn)
+        }
+    })
     return <motion.div
         initial={{ y: 5, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

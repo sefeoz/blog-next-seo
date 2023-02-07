@@ -6,6 +6,7 @@ export default function Comments({comments}){
     return(
         <div  className="mt-10 mb-48 space-y-6">
             {comments.map(({ id, createdAt, text, user,btn}) => {
+                console.log(id)
                 return (
                     <div key={id} className="flex items-center justify-between border border-normal-blue rounded-xl ">
                         <div  className={"flex items-center justify-between space-x-6 p-4"}>
@@ -20,11 +21,16 @@ export default function Comments({comments}){
                             </div>
 
                         </div>
-                       
+                        <div key={btn} id="remove">
+                            <button id="btn">
+                                <FontAwesomeIcon icon={faX}  className={"text-light-blue mr-5"}/>
+                            </button>
+
+                        </div>
 
                     </div>
 
-                )
+            )
             })}
         </div>
     )

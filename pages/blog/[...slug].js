@@ -25,7 +25,7 @@ export default function PostPage({post}){
         commentsSet(data)
 
     }
-    
+
 useEffect(()=>{
     if (!url) return
     fetchComment();
@@ -34,11 +34,9 @@ useEffect(()=>{
     useEffect(()=>{
         const url = window.location.origin + window.location.pathname
         urlSet(url)
-        
 
 
     }, [])
-
     const content = useHydrate(post, {
         components: mdxComponents,
     })
@@ -57,12 +55,14 @@ useEffect(()=>{
         textSet("")
     }
     useEffect(()=>{
-        const remove = document.getElementById("remove");
-        const btn = document.getElementById("button");
-
+        const remove = document.querySelectorAll("#remove");
         if (user?.sub != "github|69189063"){
-            remove?.removeChild(btn)
+             remove.forEach((remove)=>{
+                 remove.remove();
+                 }
+             )
         }
+
     })
     return <motion.div
         initial={{ y: 5, opacity: 0 }}

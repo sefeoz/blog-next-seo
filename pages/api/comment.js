@@ -1,9 +1,8 @@
-import {
-    nanoid
-} from "nanoid"
+import {nanoid} from "nanoid"
 import Redis from "ioredis"
 
 export default async function handler(req, res) {
+
 
     //CREATE
     if (req.method === "POST") {
@@ -37,8 +36,7 @@ export default async function handler(req, res) {
                 name: user.name,
                 picture: user.picture
             },
-            btn,
-            
+
         }
         let redis = new Redis(process.env.REDIS_URL)
 
@@ -67,4 +65,5 @@ export default async function handler(req, res) {
 
     }
 }
+
 

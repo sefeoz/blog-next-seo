@@ -90,6 +90,25 @@ export default function Header() {
             </motion.button>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
+              <img src={user.picture} className="rounded-full" width="40" />
+              <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
+              <button typeof="button"
+                      className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
+                                hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
+                      onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
+                Log Out
+              </button>
+            </div>:<div className="">
+              <button typeof="button"
+                      className="flex rounded bg-green-500 px-5 py-2 font-semibold lato
+                                hover:bg-inherit hover:text-green-500 text-lg md:text-[1rem] ease-in-out duration-200"
+                      onClick={() => loginWithRedirect()}>
+                Log In
+              </button>
+
+
+            </div>}
           </div>
         </nav>
         <Dialog
@@ -154,6 +173,25 @@ export default function Header() {
                   </Link>
                 </div>
                 <div className="py-6">
+                  {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
+                    <img src={user.picture} className="rounded-full" width="40" />
+                    <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
+                    <button typeof="button"
+                            className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
+                                hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
+                            onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
+                      Log Out
+                    </button>
+                  </div>:<div className="">
+                    <button typeof="button"
+                            className="flex rounded bg-green-500 px-5 py-2 font-semibold lato
+                                hover:bg-inherit hover:text-green-500 text-lg md:text-[1rem] ease-in-out duration-200"
+                            onClick={() => loginWithRedirect()}>
+                      Log In
+                    </button>
+
+
+                  </div>}
                 </div>
               </div>
             </div>

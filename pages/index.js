@@ -10,65 +10,72 @@ function HomePage() {
     });
     return(
         <motion.div
-            initial={{ y: 5, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -5, opacity: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.5 }}
         >
+      <div className="max-w-7xl mx-auto">
+        <div className="flex lg:flex-row flex-col items-center text-center lg:text-start lg:mt-10 mx-5">
+            <div className="basis-2/3 lg:mb-5 mx-5">
+                <h2 className="text-white text-6xl font-thin mb-4">Hello. I'm Sadan Efe.</h2>
+                <p className="text-white font-bold text-2xl mb-4">I'm studying Software Engineering at Istinye University.</p>
+                <p className="text-white text-2xl font-light hidden lg:block mb-3">I have HTML and CSS certificate from Yıldız Teknik University and created Websites.
+                    I improved myself on Adobe products. I can design in Photoshop and edit video in Premiere Pro.</p>
+                <p className="text-white text-2xl font-light hidden lg:block"> I love playing basketball, reading technology news and playing video games with friends.
+                    I enjoy creating or learning new things.</p>
+                <p className="text-white text-2xl font-light hidden lg:block"> I'm trying do Graffiti and Illustration for personal.
 
-            <div className="site-4xl-container">
-                <div className="flex flex-col lg:flex-row items-center">
-                    <div id="img" className="border-white border-2 rounded-2xl shadow-2xl shadow-zinc-700">
-                        <img className="max-w-sm rounded-2xl saturate-50 hover:saturate-100 transition" src="/me-portrait.JPG" alt=""/>
-                    </div>
-                    <div className="text-center lg:text-start mx-5">
-                        <h1 className="text-3xl text-gray-200 mt-5 lg:mt-0 mb-2 raleway-light">Hello. I'm Sadan Efe.</h1>
-                        <h2 className="text-2xl raleway-md text-gray-300"> I'm studying Software Engineering at Istinye University.</h2>
-                    </div>
-                </div>
-                <div className={"mt-7 text-xl raleway-semibold text-gray-400"}>
-                    <p>I have HTML and CSS certificate from Yıldız Teknik University and created Websites.
-                        I improved myself on Adobe products. I can design in Photoshop and edit video in Premiere Pro.</p>
-                    <p className="mt-3 text-xl raleway-semibold text-gray-400">
-                        I love playing basketball, reading technology news and playing video games with friends.
-                        I enjoy creating or learning new things.
-                    </p>
-                    <p className="mt-3 text-xl raleway-semibold text-gray-400">
-                        I'm trying do Graffiti and Illustration for personal.
-
-                        <br/>
-                        You can check it on
-                        <Link href="/art">
-                            <a className="underline mx-1 underline-offset-2 hover:text-zinc-600
-                 ease-in-out duration-100 inline">
-                                Art
-                            </a>
-                        </Link>
-                        page.
-                    </p>
-                </div>
-                <div className=" site-container flex items-center justify-around mt-10 mb-20 raleway-semibold">
-                    <Link href="https://www.instagram.com/sefeoz/">
-                        <a target="_blank" className="flex items-center text-light-blue hover:text-gray-600 ease-in-out duration-200">
-                            <FontAwesomeIcon icon={faInstagram} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
-                            Instagram
+                    <br/>
+                    You can check it on
+                    <Link href="/art">
+                        <a className="mx-2 underline hover:text-gray-700 transition ">
+                            Art
                         </a>
                     </Link>
-                    <Link href="https://twitter.com/sefeoz">
-                        <a target="_blank" className="flex items-center text-light-blue hover:text-gray-600 ease-in-out duration-200">
-                            <FontAwesomeIcon icon={faTwitter} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
-                            Twitter
-                        </a>
-                    </Link>
-                    <Link href="https://github.com/kelboindaserver">
-                        <a target="_blank" className="flex items-center text-light-blue hover:text-gray-600 ease-in-out duration-200">
-                            <FontAwesomeIcon icon={faGithub} className="text-3xl md:mr-3 mr-2"></FontAwesomeIcon>
-                            GitHub
-                        </a>
-                    </Link>
-
-                </div>
+                    page.</p>
             </div>
+            <div className="basis-1/3">
+                <img className="lg:max-w-lg rounded-3xl rounded max-w-[20rem] mx-auto hover:saturate-100 saturate-50 transition" src="./me-portrait.JPG" alt=""/>
+                <p className="text-white text-2xl font-light lg:hidden mx-5 mb-3 mt-7">I have HTML and CSS certificate from Yıldız Teknik University and created Websites.
+                    I improved myself on Adobe products. I can design in Photoshop and edit video in Premiere Pro.</p>
+                <p className="text-white text-2xl font-light lg:hidden mx-5"> I love playing basketball, reading technology news and playing video games with friends.
+                    I enjoy creating or learning new things.</p>
+            </div>
+
+        </div>
+          <div className="text-white space-x-12 justify-center flex text-4xl my-12 lg:mt-24">
+              <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+              >
+                  <Link className="flex justify-center items-center" href="https://www.instagram.com/sefeoz/">
+                      <FontAwesomeIcon icon={faInstagram}/>
+                  </Link>
+              </motion.button>
+              <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+              >
+                  <Link href="https://github.com/kelboindaserver">
+                      <FontAwesomeIcon icon={faGithub}/>
+
+                  </Link>
+              </motion.button>
+
+              <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+              >
+                  <Link href="https://twitter.com/sefeoz">
+                      <FontAwesomeIcon icon={faTwitter}/>
+                  </Link>
+              </motion.button>
+
+
+          </div>
+
+      </div>
         </motion.div>
     )
 }

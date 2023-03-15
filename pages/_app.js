@@ -1,7 +1,8 @@
 import '../styles/global.css'
-import Header from "../components/header";
 import { Auth0Provider } from "@auth0/auth0-react";
 import {motion} from "framer-motion";
+import Header from "../components/header";
+import Bg from "../components/bg";
 
 function MyApp({Component, pageProps}) {
     return(
@@ -20,9 +21,10 @@ function MyApp({Component, pageProps}) {
         >
 
         <div className="antialiased text-gray-900">
-        <Header />
+            <Header/>
         <main className="my-6">
             <Component {... pageProps}/>
+            <Bg/>
         </main>
         </div>
         </Auth0Provider>

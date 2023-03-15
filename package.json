@@ -17,6 +17,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@hapi/boom": "^10.0.0",
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
     "babel-plugin-macros": "^3.1.0",
     "framer-motion": "^7.2.1",
     "helper": "^0.0.13",
@@ -34,6 +36,7 @@
     "react-head": "^3.4.2",
     "react-helper": "^4.0.0",
     "react-i18next": "^11.18.5",
+    "react-router": "^6.9.0",
     "react-router-dom": "6",
     "three": "^0.148.0"
   },

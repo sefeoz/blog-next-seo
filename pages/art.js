@@ -11,9 +11,6 @@ function PhotosPage({ photos, stats }) {
         exit={{ y: -5, opacity: 0 }}
         transition={{ duration: 0.4 }}
     >
-
-
-
     <div className="mx-5 lg:mx-auto lg:px-32">
         <div className="columns-xs gap-6 space-y-6">
             <div><img className="rounded-2xl border-2 brightness-75 transition hover:brightness-100 p-1" src="/space-kel.png" alt=""/></div>

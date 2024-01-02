@@ -76,7 +76,7 @@ export default function Header() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
             >
-              <Link href={"/blog"}>
+              <Link href={"/projects"}>
                 <p
                     className={`text-md font-bold text-white hover:bg-gray-600 rounded-md transition px-5 py-2 outline outline-2 outline-gray-600 ${
                         router.pathname === "/blog"
@@ -84,31 +84,12 @@ export default function Header() {
                             : ""
                     } `}
                 >
-                  Blog
+                  Projects
                 </p>
               </Link>
             </motion.button>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
-              <img src={user.picture} className="rounded-full" width="40" />
-              <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
-              <button typeof="button"
-                      className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
-                                hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
-                      onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
-                Log Out
-              </button>
-            </div>:<div className="">
-              <button typeof="button"
-                      className="flex rounded bg-green-500 px-5 py-2 font-semibold lato
-                                hover:bg-inherit hover:text-green-500 text-lg md:text-[1rem] ease-in-out duration-200"
-                      onClick={() => loginWithRedirect()}>
-                Log In
-              </button>
-
-
-            </div>}
           </div>
         </nav>
         <Dialog
@@ -163,35 +144,16 @@ export default function Header() {
                   <Link href={"/blog"}  onClick={() => setMobileMenuOpen(false)}>
                     <p onClick={() => setMobileMenuOpen(false)}
                         className={`my-4 text-center text-md font-bold text-white hover:bg-gray-600 rounded-md transition px-4 py-2 outline outline-2 outline-gray-600 ${
-                            router.pathname === "/blog"
+                            router.pathname === "/projects"
                                 ? "bg-zinc-600 bg-opacity-50 text-white"
                                 : ""
                         } `}
                     >
-                      Blog
+                      Projects
                     </p>
                   </Link>
                 </div>
                 <div className="py-6">
-                  {isAuthenticated ? <div className="flex flex-col lg:flex-row  items-center space-x-3 space-y-3 lg:space-y-0">
-                    <img src={user.picture} className="rounded-full" width="40" />
-                    <span className="font-bold kanto text-[0.95rem] text-gray-100">{user.name}</span>
-                    <button typeof="button"
-                            className="flex rounded lato bg-red-500 px-5 py-2 font-semibold text-inherit
-                                hover:bg-inherit hover:text-red-500 text-[1rem] ease-in-out duration-200"
-                            onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL})}>
-                      Log Out
-                    </button>
-                  </div>:<div className="">
-                    <button typeof="button"
-                            className="flex rounded bg-green-500 px-5 py-2 font-semibold lato
-                                hover:bg-inherit hover:text-green-500 text-lg md:text-[1rem] ease-in-out duration-200"
-                            onClick={() => loginWithRedirect()}>
-                      Log In
-                    </button>
-
-
-                  </div>}
                 </div>
               </div>
             </div>

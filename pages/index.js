@@ -36,7 +36,7 @@ function HomePage() {
             </div>
             <div className="basis-1/3  text-left">
                 <img
-                    className="lg:max-w-lg rounded-3xl rounded max-w-[20rem] mx-auto hover:saturate-100 saturate-50 transition"
+                    className="lg:max-w-lg  rounded-3xl max-w-[20rem] mx-auto hover:saturate-100 saturate-50 transition"
                     src="./me-portrait.JPG" alt=""/>
                 <p className="text-white text-2xl font-bold lg:hidden mb-1 mt-8 mx-5">Education</p>
                 <ul className="text-white text-2xl font-light  lg:hidden mb-3 ml-12 list-disc">

@@ -141,7 +141,7 @@ export default function Header() {
                       Art
                     </p>
                   </Link>
-                  <Link href={"/blog"}  onClick={() => setMobileMenuOpen(false)}>
+                  <Link href={"/projects"}  onClick={() => setMobileMenuOpen(false)}>
                     <p onClick={() => setMobileMenuOpen(false)}
                         className={`my-4 text-center text-md font-bold text-white hover:bg-gray-600 rounded-md transition px-4 py-2 outline outline-2 outline-gray-600 ${
                             router.pathname === "/projects"

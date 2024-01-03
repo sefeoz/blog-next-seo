@@ -17,8 +17,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@hapi/boom": "^10.0.0",
-    "@headlessui/react": "^1.7.13",
-    "@heroicons/react": "^2.0.16",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.1.1",
     "babel-plugin-macros": "^3.1.0",
     "framer-motion": "^7.2.1",
     "helper": "^0.0.13",
@@ -29,8 +29,9 @@
     "luxon": "^3.0.2",
     "nano-id": "^1.1.0",
     "nanoid": "^4.0.0",
-    "next": "^12.2.5",
-    "next-mdx": "^0.6.2",
+    "next": "^14.0.4",
+    "next-mdx": "^0.1.0",
+    "octokit": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-head": "^3.4.2",
@@ -43,9 +44,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
     "prettier": "^2.7.1",
-    "tailwindcss": "^3.2.2"
+    "tailwindcss": "^3.4.0"
   }
 }

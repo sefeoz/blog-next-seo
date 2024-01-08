@@ -10,6 +10,7 @@ const posts = [
             'SylabbusUI: Your Ultimate Study Tracker App with SwiftUI',
         date: 'Mar 16, 2020',
         datetime: '2020-03-16',
+        img : "ExamAdd.png",
         author: {
             name: 'Sadan Efe OZ',
             href: '#',
@@ -35,6 +36,7 @@ function Projects() {
             {posts.map((post) => (
                 <article key={post.id} className="flex max-w-xl flex-col items-start justify-between border-2 border-amber-50 px-6 py-16 rounded-3xl bg-opacity-25 bg-gray-500">
                     <div className="group relative">
+                        <img src={post.img} alt=""/>
                         <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-gray-600">
                             <a href={post.href} target="_blank">
                                 <span className="absolute inset-0"/>

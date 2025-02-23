@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.work-thin { font-weight: 100; }
+.work-extralight { font-weight: 200; }
+.work-light { font-weight: 300; }
+.work-regular { font-weight: 400; }
+.work-medium { font-weight: 500; }
+.work-semibold { font-weight: 600; }
+.work-bold { font-weight: 700; }
+.work-extrabold { font-weight: 800; }
+.work-black { font-weight: 900; }
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply dark:bg-background dark:text-foreground bg-foreground text-background;
+  font-family: 'Work Sans', sans-serif;
+
+}

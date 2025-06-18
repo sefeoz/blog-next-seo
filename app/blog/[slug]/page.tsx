@@ -6,6 +6,22 @@ import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
 
+interface Post {
+  _id: string;
+  title: string;
+  slug: {
+    current: string;
+  };
+  publishedAt: string;
+  description: string;
+  body: unknown; // PortableText için unknown kullanıyoruz
+  mainImage?: {
+    asset: {
+      url: string;
+    };
+  };
+}
+
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
@@ -94,7 +110,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 // Structured Data (JSON-LD) için helper function
-function generateStructuredData(post: any) {
+function generateStructuredData(post: Post) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -103,14 +119,14 @@ function generateStructuredData(post: any) {
     "author": {
       "@type": "Person",
       "name": "Sadan Efe Oz",
-      "url": "https://sefeoz.com"
+      "url": "https://sefeoz.vercel.app"
     },
     "publisher": {
       "@type": "Organization",
       "name": "S.EFE OZ Blog",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://sefeoz.com/logo.png"
+        "url": "https://sefeoz.vercel.app/logo.png"
       }
     },
     "datePublished": post.publishedAt,
@@ -118,7 +134,7 @@ function generateStructuredData(post: any) {
     "image": post.mainImage?.asset?.url,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://sefeoz.com/blog/${post.slug.current}`
+      "@id": `https://sefeoz.vercel.app/blog/${post.slug.current}`
     }
   };
 }

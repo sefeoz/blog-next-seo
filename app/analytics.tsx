@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 // Google Analytics için
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void;
   }
 }
 
@@ -16,7 +16,7 @@ export default function Analytics() {
   useEffect(() => {
     // Google Analytics page view tracking
     if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
+      window.gtag("config", process.env.NEXT_PUBLIC_GA_ID || "", {
         page_path: pathname,
       });
     }

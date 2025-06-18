@@ -1,6 +1,14 @@
 import { createClient } from "next-sanity";
 import { MetadataRoute } from "next";
 
+interface SanityPost {
+  slug: {
+    current: string;
+  };
+  publishedAt: string;
+  _updatedAt?: string;
+}
+
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
@@ -12,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://sefeoz.vercel.app";
 
   // Blog postlarını getir
-  const posts = await client.fetch(`
+  const posts = await client.fetch<SanityPost[]>(`
     *[_type == "post"] {
       slug,
       publishedAt,
@@ -37,7 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // Blog post sayfaları
-  const blogPages = posts.map((post: any) => ({
+  const blogPages = posts.map((post: SanityPost) => ({
     url: `${baseUrl}/blog/${post.slug.current}`,
     lastModified: new Date(post._updatedAt || post.publishedAt),
     changeFrequency: "monthly" as const,

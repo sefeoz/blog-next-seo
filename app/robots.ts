@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://sefeoz.com"; // Domain'inizi buraya ekleyin
+  const baseUrl = "https://sefeoz.vercel.app";
   
   return {
     rules: {

@@ -15,19 +15,23 @@ export default function Home() {
     }
   };
   return (
-    <main className="relative ">
-     
-      <motion.section
+    <main className="relative">
+      {/* Hero Section */}
+      <section
         id="about"
         className="flex items-start pt-8 max-w-6xl md:mx-auto px-12 pb-12 md:pb-0"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        aria-labelledby="about-heading"
       >
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div>
-            <h2 className="md:text-3xl text-2xl work-medium">Hello, I&apos;m Sadan Efe Oz.</h2>
+            <h1 id="about-heading" className="md:text-3xl text-2xl work-medium">
+              Hello, I&apos;m Sadan Efe Oz.
+            </h1>
             <p className="md:text-xl mt-4 work-thin">
               I&apos;m a third-year Software Engineering student at İstinye University, and I&apos;ve been diving deep into the world of web development.
               Right now, I&apos;m mostly focused on building fast, modern, and scalable websites with Next.js, and I&apos;m constantly exploring new technologies to sharpen my skills.
@@ -44,10 +48,10 @@ export default function Home() {
           </div>
 
           {/* Images */}
-          <div className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-4">
+          <figure className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-4">
             <Image
               src="/intro1.webp"
-              alt="Efe Oz"
+              alt="Sadan Efe Oz - Software Engineering Student"
               width={1000}
               height={1000}
               className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300"
@@ -56,67 +60,95 @@ export default function Home() {
             />
             <Image
               src="/intro2.webp"
-              alt="Efe Oz"
+              alt="Sadan Efe Oz - Web Developer"
               width={1000}
               height={1000}
               className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300 hidden md:block"
-            priority
+              priority
               sizes="(max-width: 768px) 50vw, 33vw"
             />
             <Image
               src="/intro3.webp"
-              alt="Efe Oz"
+              alt="Sadan Efe Oz - Technology Enthusiast"
               width={1000}
               height={1000}
-              className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300 "
+              className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300"
               priority
               sizes="(max-width: 768px) 50vw, 33vw"
             />
-          </div>
+          </figure>
 
           {/* Social Media Links */}
-          <div className="mt-5 flex justify-center items-center gap-4">
-            <Link href="https://github.com/kelboindaserver" target="_blank">
+          <nav className="mt-5 flex justify-center items-center gap-4" aria-label="Social media links">
+            <Link 
+              href="https://github.com/sefeoz" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+            >
               <Github className="w-10 h-10 hover:brightness-50 transition-all duration-300" />
             </Link>
-            <Link href="https://www.linkedin.com/in/şadan-efe-öz-2242441ba" target="_blank">
+            <Link 
+              href="https://www.linkedin.com/in/şadan-efe-öz-2242441ba" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
               <Linkedin className="w-10 h-10 hover:brightness-50 transition-all duration-300" />
             </Link>
-            <Link href="https://www.instagram.com/sefeoz/" target="_blank">
+            <Link 
+              href="https://www.instagram.com/sefeoz/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Profile"
+            >
               <Instagram className="w-10 h-10 hover:brightness-50 transition-all duration-300" />
             </Link>
-            <Link href="https://x.com/sefeoz/" target="_blank">
+            <Link 
+              href="https://x.com/sefeoz/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter Profile"
+            >
               <Twitter className="w-10 h-10 hover:brightness-50 transition-all duration-300" />
             </Link>
-          </div>
-        </div>
-      </motion.section>
+          </nav>
+        </motion.div>
+      </section>
 
       {/* PROJECTS SECTION */}
-      <motion.section
+      <section
         id="projects"
-        className=" bg-foreground dark:bg-background mt-5"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        className="bg-foreground dark:bg-background mt-5"
+        aria-labelledby="projects-heading"
       >
-        <Projects />
-      </motion.section>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Projects />
+        </motion.div>
+      </section>
 
       {/* BLOG SECTION */}
-      <motion.section
+      <section
         id="blog"
         className="flex flex-col items-center justify-center"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        aria-labelledby="blog-heading"
       >
-        <h2 className="text-4xl font-thin text-center py-[2.5rem]">blog</h2>
-        <Blog />
-      </motion.section>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 id="blog-heading" className="text-4xl font-thin text-center py-[2.5rem]">blog</h2>
+          <Blog />
+        </motion.div>
+      </section>
     </main>
   );
 }

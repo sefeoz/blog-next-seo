@@ -45,6 +45,8 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+export const revalidate = 3600; // 1 saat
+
 export default async function BlogPost({ params }: PageProps) {
   try {
     const resolvedParams = await params;
@@ -91,12 +93,12 @@ export default async function BlogPost({ params }: PageProps) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-12">
         <h1 className="text-4xl font-bold mb-4">Error loading post</h1>
+        <p className="text-gray-600">Please try again later.</p>
       </div>
     );
   }
 }
 
-// Generate static params for known slugs
 export async function generateStaticParams() {
   const query = `*[_type == "post"]{
     slug

@@ -51,6 +51,8 @@ export default function Home() {
               width={1000}
               height={1000}
               className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300"
+              priority
+              sizes="(max-width: 768px) 50vw, 33vw"
             />
             <Image
               src="/intro2.webp"
@@ -58,6 +60,8 @@ export default function Home() {
               width={1000}
               height={1000}
               className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300 hidden md:block"
+            priority
+              sizes="(max-width: 768px) 50vw, 33vw"
             />
             <Image
               src="/intro3.webp"
@@ -65,6 +69,8 @@ export default function Home() {
               width={1000}
               height={1000}
               className="rounded-lg brightness-75 hover:brightness-100 transition-all duration-300 "
+              priority
+              sizes="(max-width: 768px) 50vw, 33vw"
             />
           </div>
 

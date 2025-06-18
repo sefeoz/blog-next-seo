@@ -84,7 +84,10 @@ export default function Header() {
                 >
                     blog
                 </p>
-                <button onClick={handleThemeChange}>
+                <button 
+                    onClick={handleThemeChange}
+                    aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                >
                     {theme === "dark" ? (
                         <Sun className={`w-[1.5rem] h-[1.5rem] transition-all duration-500 ${isRotating ? 'rotate-180 scale-75' : ''}`} />
                     ) : (

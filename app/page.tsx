@@ -6,6 +6,7 @@ import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 import Projects from "@/components/projects";
 import { motion } from "framer-motion";
 import Blog from "@/components/blog";
+import DecryptedText from "@/components/decrytepText";
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -30,21 +31,27 @@ export default function Home() {
         >
           <div>
             <h1 id="about-heading" className="md:text-3xl text-2xl work-medium">
-              Hello, I&apos;m Sadan Efe Oz.
+            <DecryptedText
+text="Hello, I&apos;m Şadan Efe Öz."
+speed={50}
+maxIterations={20}
+characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+"
+className="revealed"
+animateOn="view"
+sequential={true}
+revealDirection="start"
+parentClassName="all-letters"
+encryptedClassName="encrypted"
+/>
             </h1>
             <p className="md:text-xl mt-4 work-thin">
-              I&apos;m a third-year Software Engineering student at İstinye University, and I&apos;ve been diving deep into the world of web development.
-              Right now, I&apos;m mostly focused on building fast, modern, and scalable websites with Next.js, and I&apos;m constantly exploring new technologies to sharpen my skills.
-              While studying, I also handle the accounting responsibilities for our family&apos;s crane rental business, which gives me valuable real-world business experience.
-              <br />
-              <br />
-              I&apos;ve always been fascinated by how tech is shaping our world, so I love keeping up with the latest trends, innovations, and industry updates.
-              But instead of just reading about them, I decided to start sharing my own thoughts and insights right here on this blog. 
-              If you&apos;re into tech, web development, or just enjoy geeking out about the latest digital trends, you&apos;ll probably find something interesting here. 
-              Feel free to check out my posts <Link href="#blog" onClick={() => scrollToSection('blog')} className="text-white work-medium hover:text-gray-300 transition-all duration-300">here</Link>.
-              <br />
-              Let&apos;s connect, learn, and build cool things together!
+              I&apos;m a 4th year Software Engineering student at İstinye University and the founder of <Link href="https://befior.com" target="_blank" rel="noopener noreferrer" className="text-white work-medium hover:text-gray-300 transition-all duration-300">Befior</Link>, my own company focused on building modern web solutions. Befior is a modern web solutions company. The company specializes in building fast, scalable, and innovative websites and digital products for businesses and individuals. Befior’s mission is to empower clients with cutting-edge technology, creative design, and tailored digital strategies that help them grow and succeed online. From custom web development to digital transformation, Befior is dedicated to delivering high-quality results and exceptional client experiences.
+              <br /><br />
+              My passion lies in web development, entrepreneurship, and creating impactful digital products. With Befior, I&apos;ve turned my ideas into reality, helping clients and businesses grow online. I&apos;m always eager to learn, innovate, and stay up-to-date with the latest technologies in the industry.<br /><br />
+              On this blog, I share my experiences, insights, and thoughts on tech, startups, and web development. If you&apos;re interested in these topics or want to connect, feel free to check out my posts <Link href="#blog" onClick={() => scrollToSection('blog')} className="text-white work-medium hover:text-gray-300 transition-all duration-300">here</Link>.<br />
+              Let&apos;s connect, learn, and build great things together!
             </p>
+           
           </div>
 
           {/* Images */}

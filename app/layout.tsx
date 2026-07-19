@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://sefeoz.vercel.app'), // Domain'inizi buraya ekleyin
+  metadataBase: new URL('https://sefeoz.vercel.app'), 
   alternates: {
     canonical: '/',
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "S.EFE OZ Blog",
     images: [
       {
-        url: "/og-image.jpg", // Open Graph resmi ekleyin
+        url: "/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "S.EFE OZ - Yazılım Geliştirici",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "S.EFE OZ - Software Engineering Student & Technology Blog",
     description: "Software engineering, technology trends, web development and personal experiences. Content about Next.js, React, and modern web technologies.",
     creator: "@sefeoz",
-    images: ["/twitter-image.jpg"], // Twitter resmi ekleyin
+    images: ["/twitter-image.jpg"], 
   },
   robots: {
     index: true,
@@ -66,11 +66,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code", // Google Search Console
-    yandex: "your-yandex-verification-code", // Yandex Webmaster
-    yahoo: "your-yahoo-verification-code", // Yahoo Site Explorer
   },
 };
 
